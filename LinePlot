@@ -1,0 +1,10 @@
+# Import pandas
+import pandas as pd
+import numpy as np
+%matplotlib inline # to use it in jupyter notebooks
+
+# Define Varibale & put in the values 
+df = pd.DataFrame(np.random.randn(50, 4), 
+        index=pd.date_range('1/1/2023', periods=50), columns=list('ABCD'))
+df = df.cumsum()
+df.plot();
